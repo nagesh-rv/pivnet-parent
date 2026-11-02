@@ -6,7 +6,7 @@
 
     <groupId>com.pivnet</groupId>
     <artifactId>pivnet-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>pivnet-parent</name>
 
@@ -22,8 +22,9 @@
         <tiles.base.version>3.0.1</tiles.base.version>
         <pdf.itext.version>2.1.7</pdf.itext.version>
         <pdf.render.version>9.1.22</pdf.render.version>
-        <security.core.version>4.2.20.RELEASE</security.core.version>
         <pivnet.dwr.version>1.0.0-SNAPSHOT</pivnet.dwr.version>
+        <pivnet.support.version>1.0.0-SNAPSHOT</pivnet.support.version>
+        <pivnet.jpa.version>1.0.0-SNAPSHOT</pivnet.jpa.version>
     </properties>
 
     <repositories>
@@ -79,14 +80,14 @@
                 <version>${pdf.render.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${security.core.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.pivnet</groupId>
                 <artifactId>pivnet-ajax-dwr</artifactId>
                 <version>${pivnet.dwr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.pivnet</groupId>
+                <artifactId>pivnet-support-common</artifactId>
+                <version>${pivnet.support.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -100,10 +101,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -154,10 +151,6 @@
         <dependency>
             <groupId>org.xhtmlrenderer</groupId>
             <artifactId>flying-saucer-pdf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.pivnet</groupId>
